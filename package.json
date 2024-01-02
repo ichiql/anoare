@@ -1,0 +1,49 @@
+{
+  "name": "anoare",
+  "version": "0.0.1",
+  "description": "あの〜、あれ...なんだっけ？ / Umm…, What was it...?",
+  "keywords": [
+    "typescript",
+    "utility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichiql/anoare.git"
+  },
+  "license": "MIT",
+  "author": "Yamashita, Shinichi",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
+    "lint": "eslint ./src/*",
+    "prepublish": "pnpm build",
+    "build:docs": "typedoc --out docs ./src/index.ts",
+    "test": "vitest --run"
+  },
+  "prettier": "@ichiql/prettier-config",
+  "devDependencies": {
+    "@ichiql/prettier-config": "^0.1.1",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "typedoc": "^0.25.6",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "vitest": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
