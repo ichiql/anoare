@@ -1,6 +1,6 @@
 {
   "name": "anoare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "あの〜、あれ...なんだっけ？ / Umm…, What was it...?",
   "keywords": [
     "typescript",
@@ -29,7 +29,7 @@
     "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
     "lint": "eslint ./src/*",
     "prepublish": "pnpm build",
-    "build:docs": "typedoc --out docs ./src/index.ts",
+    "build:docs": "typedoc",
     "test": "vitest --run"
   },
   "prettier": "@ichiql/prettier-config",
