@@ -24,9 +24,9 @@ module.exports = {
     Classes: 1.5,
   },
   navigationLinks: {
-    GitHub: 'https://github.com/ichiql/anoare',
+    GitHub: 'https://github.com/nantokaworks/anoare',
   },
   sidebarLinks: {
-    Web: 'https://anoare.ichiql.dev',
+    Web: 'https://anoare.nantoka.works',
   },
 }
