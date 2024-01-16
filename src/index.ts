@@ -1,5 +1,6 @@
 export * from './convert/bigintize'
 export * from './convert/numberize'
+export * from './convert/sliceBySize'
 export * from './convert/stringify'
 export * from './is/isArray'
 export * from './is/isBoolean'
