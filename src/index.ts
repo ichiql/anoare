@@ -1,4 +1,5 @@
 export * from './convert/bigintize'
+export * from './convert/comma'
 export * from './convert/numberize'
 export * from './convert/sliceBySize'
 export * from './convert/stringify'
