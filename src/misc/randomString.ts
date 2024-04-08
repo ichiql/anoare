@@ -4,7 +4,7 @@ interface Input {
 }
 
 export function randomString({ length, charactorSet }: Input) {
-  if (!charactorSet || charactorSet.length === 0) return undefined
+  if (!charactorSet || charactorSet.length === 0) throw new Error('charactorSet is empty')
   let randstr = ''
 
   for (let i = 0; i < length; i++) {
