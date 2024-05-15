@@ -4,12 +4,15 @@ type ReplaceOptions = {
   replacement: string
 }
 
+function escapeRegExp(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
 export function replaceExactMatch({ input, target, replacement }: ReplaceOptions): {
   result: string
   count: number
 } {
-  const escapedTarget = target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  const regex = new RegExp(`\\b${escapedTarget}\\b`, 'g')
+  const regex = new RegExp(`\\b${escapeRegExp(target)}\\b`, 'gm')
 
   const matches = input.match(regex)
   const count = matches ? matches.length : 0
